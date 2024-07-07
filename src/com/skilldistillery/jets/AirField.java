@@ -49,6 +49,8 @@ public class AirField {
 			System.out.println("Speed: "+ j.getSpeed());
 			System.out.println("Range: "+ j.getRange());
 			System.out.println("Price: "+ j.getPrice());
+			System.out.println("--------------------------------------------");
+
 		}
 	}
 	public void viewFastestJet()
@@ -63,10 +65,78 @@ public class AirField {
 				fastestJet = j;
 			}
 		}
+		System.out.println("--------------------------------------------");
+
 		System.out.println("Model: " + fastestJet.getModel());
 		System.out.println("Speed: " + fastestJet.getSpeed());
 		System.out.println("Range: " + fastestJet.getRange());
 		System.out.println("Price: " + fastestJet.getPrice());
-	}
+		System.out.println("--------------------------------------------");
 
+	}
+	public void viewFarthestRange()
+	{
+		double rangeMax = 0;
+		Jet rangeJet = null;
+		for (Jet j : jets)
+		{
+			if (j.getRange() > rangeMax)
+			{
+				rangeMax = j.getRange();
+				rangeJet = j;
+			}
+		}
+		System.out.println("--------------------------------------------");
+
+		System.out.println("Model: " + rangeJet.getModel());
+		System.out.println("Speed: " + rangeJet.getSpeed());
+		System.out.println("Range: " + rangeJet.getRange());
+		System.out.println("Price: " + rangeJet.getPrice());
+		System.out.println("--------------------------------------------");
+
+	}
+	
+
+	public void loadCargo()
+	{
+		for (Jet j : jets)
+		{
+			if (j instanceof CargoJet)
+			{
+				((CargoJet) j).loadCargo();
+			}
+		}
+		
+	}
+	public void dogfight()
+	{
+		for (Jet j : jets)
+		{
+			if (j instanceof CombatReady)
+			{
+				((CombatReady) j).fight();
+			}
+		}
+		
+	}
+	
+	public void addCargoJet(String model, double speed, int range, long price)
+	{
+		Jet j = new CargoJet(model, speed, range, price);
+		jets.add(j);
+
+	}
+	public void addFighterJet(String model, double speed, int range, long price)
+	{
+		Jet j = new FighterJet(model, speed, range, price);
+		jets.add(j);
+		
+	}
+	public void addJetImpl(String model, double speed, int range, long price)
+	{
+		Jet j = new JetImpl(model, speed, range, price);
+		jets.add(j);
+		
+	}
+	
 }
