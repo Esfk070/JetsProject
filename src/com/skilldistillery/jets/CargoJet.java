@@ -24,10 +24,7 @@ public class CargoJet extends Jet implements CargoCarrier{
 		//time = Range / velocity
 		time = this.getRange()/this.getSpeed();
 		System.out.println("Amount of flight time until fuel runs out: " + time);
-		
-		
-
-		
+			
 	}
 
 }

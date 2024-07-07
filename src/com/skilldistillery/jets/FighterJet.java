@@ -15,8 +15,16 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fly() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Model: " + this.getModel());
+		System.out.println("Speed: " + this.getSpeed());
+		System.out.println("Range: " + this.getRange());
+		System.out.println("Price: " + this.getPrice());
+		double time;
+		// velocity = Range / time
+		//time = Range / velocity
+		time = this.getRange()/this.getSpeed();
+		System.out.println("Amount of flight time until fuel runs out: " + time);
+			
 	}
 	
 	

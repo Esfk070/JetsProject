@@ -31,11 +31,12 @@ public class JetsApp {
 			case 1:	// List Fleet
 				airfield.printJets();
 				break;
-			case 2:
+			case 2:	//Fly All Jets
 				airfield.flyFleet();
 
 				break;
-			case 3:
+			case 3:	//View fastest jet
+				airfield.viewFastestJet();
 				break;
 			case 4:
 				break;

@@ -51,5 +51,22 @@ public class AirField {
 			System.out.println("Price: "+ j.getPrice());
 		}
 	}
+	public void viewFastestJet()
+	{
+		double fastest = 0;
+		Jet fastestJet = null;
+		for (Jet j : jets)
+		{
+			if (j.getSpeed() > fastest)
+			{
+				fastest = j.getSpeed();
+				fastestJet = j;
+			}
+		}
+		System.out.println("Model: " + fastestJet.getModel());
+		System.out.println("Speed: " + fastestJet.getSpeed());
+		System.out.println("Range: " + fastestJet.getRange());
+		System.out.println("Price: " + fastestJet.getPrice());
+	}
 
 }
