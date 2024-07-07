@@ -10,7 +10,7 @@ public class FighterJet extends Jet implements CombatReady {
 	@Override
 	public void fight() {
 		System.out.println(this.getModel() + " is dogfighting");
-		
+
 	}
 
 	@Override
@@ -21,12 +21,10 @@ public class FighterJet extends Jet implements CombatReady {
 		System.out.println("Price: " + this.getPrice());
 		double time;
 		// velocity = Range / time
-		//time = Range / velocity
-		time = this.getRange()/this.getSpeed();
+		// time = Range / velocity
+		time = this.getRange() / this.getSpeed();
 		System.out.println("Amount of flight time until fuel runs out: " + time);
-			
+
 	}
-	
-	
 
 }
