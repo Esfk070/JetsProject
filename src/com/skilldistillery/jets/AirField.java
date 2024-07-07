@@ -139,4 +139,31 @@ public class AirField {
 		
 	}
 	
+	public void removeIndex(int index)
+	{
+		//int count = 0;
+		if (index >= jets.size() || index < 0)
+		{
+			System.out.println("invalid index");;
+		}
+		else
+		{
+	
+				jets.remove(index);
+				
+			
+			
+		}
+		
+
+
+	}
+	public void printIndexes() {
+		for (int i = 0; i< jets.size(); i++)
+		{
+			System.out.println(i + " " +  jets.get(i).getModel());
+		}
+		
+	}
+	
 }

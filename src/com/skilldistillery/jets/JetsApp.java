@@ -86,6 +86,10 @@ public class JetsApp {
 				Jet j = new JetImpl("Boeing 747", 564, 5380, 250000000);
 				break;
 			case 8:	//Remove a jet to fleet
+				airfield.printIndexes();
+				System.out.println("Which index do you want to remove?");
+				int index = keyboard.nextInt();
+				airfield.removeIndex(index);
 				break;
 			case 9:
 				System.out.println("Goodbye");
